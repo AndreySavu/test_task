@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.common.test_task.controller;
 
 import java.util.ArrayList;
 import java.util.List;
