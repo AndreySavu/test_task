@@ -1,5 +1,5 @@
 package com.common.test_task.model;
- import jakarta.persistence.*; // for Spring Boot 3
+import jakarta.persistence.*;
 @Entity
 @Table(name = "intervals")
 public class Interval {
@@ -11,8 +11,7 @@ public class Interval {
     @Column(name = "end")
     private int end;
 
-    public Interval() {
-    }
+    public Interval() { }
 
     public Interval(int start, int end) {
         this.start = start;
@@ -25,5 +24,9 @@ public class Interval {
 
     public int getEnd() {
         return end;
+    }
+
+    public void setEnd(int end) {
+        this.end = end;
     }
 }
