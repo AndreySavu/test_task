@@ -5,14 +5,12 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import com.common.test_task.model.Interval;
+import com.common.test_task.model.IntervalDigits;
 import com.common.test_task.repository.IntervalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,14 +34,15 @@ public class Controller {
         if(intervals.size()==1){
             return null;
         }
+
         // Сортируем по первому элементу, на случай если интервалы были не упорядочены
         intervals.sort(Comparator.comparingInt(e -> e.getFirst()));
 
-        List<Interval> mergedList = new ArrayList<>();
-        Interval prev = new Interval(intervals.get(0).get(0), intervals.get(0).get(1));
+        List<IntervalDigits> mergedList = new ArrayList<>();
+        IntervalDigits prev = new IntervalDigits(intervals.get(0).get(0), intervals.get(0).get(1));
 
         for (int i = 1; i < intervals.size(); i++) {
-            Interval current = new Interval(intervals.get(i).get(0), intervals.get(i).get(1));
+            IntervalDigits current = new IntervalDigits(intervals.get(i).get(0), intervals.get(i).get(1));
             if (current.getStart() <= prev.getEnd()) {
                 // Слияние интервалов
                 prev.setEnd(Math.max(prev.getEnd(), current.getEnd()));
@@ -54,7 +53,7 @@ public class Controller {
             }
         }
         mergedList.add(prev);
-        for(Interval item : mergedList){
+        for(IntervalDigits item : mergedList){
             System.out.println(item.getStart());
             System.out.println(item.getEnd());
             intervalRepository.save(item);
@@ -64,9 +63,9 @@ public class Controller {
     }
     @GetMapping("/min")
     @ResponseBody
-    public List<Interval> getMinInterval(@RequestParam(defaultValue = "digits") String kind){
+    public List<Integer> getMinInterval(@RequestParam(defaultValue = "digits") String kind){
         //Interval res = new Interval(1,2);
-        return intervalRepository.findAll();
+        return intervalRepository.findMin();
     }
 
 
