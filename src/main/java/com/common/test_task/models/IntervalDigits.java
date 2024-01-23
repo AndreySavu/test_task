@@ -1,33 +1,25 @@
-package com.common.test_task.model;
+package com.common.test_task.models;
 import jakarta.persistence.*;
-
 @Entity
-@Table(name = "intervall")
+@Table(name = "digit_intervals")
 public class IntervalDigits {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column(name = "startt")
-    private int startt;
-    @Column(name = "endd")
-    private int endd;
-
+    @Column(name = "_start")
+    private int start;
+    @Column(name = "_end")
+    private int end;
     public IntervalDigits() { }
-
     public IntervalDigits(int start, int end) {
-        this.startt = start;
-        this.endd = end;
-    }
-
+        this.start = start;
+        this.end = end;    }
     public int getStart() {
-        return startt;
+        return start;
     }
-
     public int getEnd() {
-        return endd;
+        return end;
     }
-
     public void setEnd(int end) {
-        this.endd = end;
-    }
-}
+        this.end = end;
+    }}
