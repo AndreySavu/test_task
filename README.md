@@ -4,8 +4,8 @@
 [![Static Badge](https://img.shields.io/badge/Apache_Maven-3.9.6-blue?logo=apache%20maven&link=https%3A%2F%2Fspring.io%2Fprojects%2Fspring-boot%2F) ](https://img.shields.io/badge/Apache_Maven-3.9.6-blue?logo=apache%20maven&link=https%3A%2F%2Fmaven.apache.org%2Fguides%2Findex.html) 
 ![Static Badge](https://img.shields.io/badge/https%3A%2F%2Fimg.shields.io%2Fbadge%2F-3.2.1-blue?logo=SpringBoot&label=Spring%20Boot&link=https%3A%2F%2Fspring.io%2Fprojects%2Fspring-boot%2F) 
 ![Static Badge](https://img.shields.io/badge/H2_database-blue?logo=database&link=https%3A%2F%2Fwww.h2database.com%2Fhtml%2Ftutorial.html) 
-[[[Hibernate-core 6.4.2.Final](https://hibernate.org/search/documentation/)](https://img.shields.io/badge/Hibernate--core-6.4.2.Final-blue?logo=hibernate&link=https%3A%2F%2Fhibernate.org%2Fsearch%2Fdocumentation%2F)](https://img.shields.io/badge/Hibernate--core-6.4.2.Final-blue?logo=hibernate&link=https%3A%2F%2Fhibernate.org%2Fsearch%2Fdocumentation%2F
-)
+![Static Badge](https://img.shields.io/badge/Hibernate--core-6.4.2.Final-blue?logo=hibernate&link=https%3A%2F%2Fhibernate.org%2Fsearch%2Fdocumentation%2F)
+
 
 ### Функциональные возможности
 1. Получение по REST API массивов с интервалами цифр или букв в формате JSON        
