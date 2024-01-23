@@ -2,7 +2,7 @@
 
 
 [Maven 4.0.0](https://maven.apache.org/guides/index.html)\
-[Springf Boot 3.2.1](https://spring.io/projects/spring-framework/)\
+![Static Badge](https://img.shields.io/badge/https%3A%2F%2Fimg.shields.io%2Fbadge%2F-3.2.1-blue?logo=SpringBoot&label=Spring%20Boot&link=https%3A%2F%2Fspring.io%2Fprojects%2Fspring-boot%2F)
 [H2 database](https://www.h2database.com/html/tutorial.html)\
 [Hibernate-core 6.4.2.Final](https://hibernate.org/search/documentation/)
 
